@@ -21,15 +21,17 @@ res = p
 ### COMPARAISON
 
 res$param = paste0(res$seq_eps, "_", res$seq_eps2, "_", res$seq_minpts, "_") # id pour jointure du résultat
+samp$v_exp2 = as.numeric(samp$v_exp > 0)
 
 for (i in 1:nrow(res)){
   s = d[colnames(d) == res$param[i]][,1] # s étant la séquence de résultat pour un ensemble de paramètres
-  res$ntrue[i] = sum(as.numeric(samp$v_exp == s)) / nrow(samp) # N(eps, minpts, eps2, E(T))  je ne sais pas comment on nomme "ensemble des trajectoires" alors j'ai mis E(T)
+  s = as.numeric(s > 0)
+  res$ntrue[i] = sum(as.numeric(samp$v_exp2 == s)) / nrow(samp) # N(eps, minpts, eps2, E(T))  je ne sais pas comment on nomme "ensemble des trajectoires" alors j'ai mis E(T)
   print(i)
 }
 
 write.csv(res, "data/results_comparison/r_comparison_points.csv")
-# hist(res$ntrue, 40, xlim = c(0,1))
+hist(res$ntrue, 40, xlim = c(0,1))
 
 
 ### SUBSET 
@@ -39,7 +41,7 @@ res2 = res[res$seq_eps2 == 600,] # a priori eps2 est juste un facteur discrimina
 lep = c(levels(as.factor(res2$seq_eps))) # x
 lmp = c(levels(as.factor(res2$seq_minpts))) # y
 
-try2 = matrix(data = try$result, nrow = length(lep), ncol = length(lmp)) # z
+try2 = matrix(data = res2$ntrue, nrow = length(lep), ncol = length(lmp)) # z
 
 ### REPRESENTATION RESULTAT
 library(plot3D)
