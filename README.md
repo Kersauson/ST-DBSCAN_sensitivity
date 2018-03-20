@@ -1,9 +1,4 @@
----
-title: "ST-DBSCAN sensitivity"
-author: "Colin Kerouanton"
-date: "2 juin 2017"
-output: html_document
----
+
 # Analyse de sensibilité de ST-DBSCAN pour un lot de trajectoires
 
 ## Inputs
