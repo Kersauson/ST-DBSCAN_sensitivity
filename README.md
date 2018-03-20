@@ -46,4 +46,4 @@ Dataframe comportant les combinaisons de paramètres, et le pourcentage de point
 
 ### Visualisation résultat pour eps2 == 600
 
-![](test_hist3d.png)
+![](test_hist3d.png?)
