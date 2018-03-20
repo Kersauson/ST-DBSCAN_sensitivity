@@ -46,5 +46,5 @@ library(plot3D)
 hist3D(x = as.numeric(lep), y = as.numeric(lmp), z = try2*100, theta = -45, phi = 40, lighting = F, scale = T,
        ticktype="detailed", shade = 0.1, resfac = 3,
        col = "white", 
-       border = "black", labels = T, nticks = 5, zlab = "% success", xlab = "Minpts", ylab = "eps")
+       border = "black", labels = T, nticks = 5, zlab = "% SUCCESS", xlab = "EPS", ylab = "MINPTS")
 

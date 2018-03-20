@@ -63,5 +63,5 @@ for(j in 1:nbt){
 
 colnames(d4)[1] = c("idt")
 
-write.csv(d4, "/media/ckerouanton/DONNEES/these/analyse_R/ST-DBSCAN_sensitivity/data/results_stdbscan/r_trajectories.csv")
+write.csv(d4, "data/results_stdbscan/r_trajectories.csv")
 
