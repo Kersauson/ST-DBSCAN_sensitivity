@@ -44,6 +44,11 @@ Dataframe comportant les 15 trajectoires, avec en première colonne l'identifian
 
 Dataframe comportant les combinaisons de paramètres, et le pourcentage de points correctement identifiés Vexp == Vstdbscan pour le lot de trajectoires.
 
+*"data/results_comparison/r_comparison_surfaces.csv"*
+
+Dataframe comportant les combinaisons de paramètres, et le pourcentage de surfaces correctement identifiés Sexp == Sstdbscan pour le lot de trajectoires. En plus, les faux positifs et faux négatifs.
+
+
 ### Visualisation résultat pour eps2 == 600
 
 ![](test_hist3d.png?)
